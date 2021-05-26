@@ -15,5 +15,7 @@ public class Main {
         System.out.println("Console Calculator");
         System.out.println("==================\n");
         System.out.println(num1 + " + " + num2 + " = " + c.summe(num1, num2));
+        System.out.println(num1 + " - " + num2 + " = " + c.subtraction(num1, num2));
+
     }
 }
