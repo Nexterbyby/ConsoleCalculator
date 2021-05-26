@@ -8,4 +8,8 @@ package ch.bbw.je;
 public class Calculator {
     public Calculator(){
     }
+
+    public int summe(int sum1, int sum2){
+        return sum1 + sum2;
+    }
 }
