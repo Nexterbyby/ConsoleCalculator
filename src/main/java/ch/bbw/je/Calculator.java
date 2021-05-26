@@ -12,4 +12,8 @@ public class Calculator {
     public int summe(int sum1, int sum2){
         return sum1 + sum2;
     }
+
+    public int subtraction(int num1, int num2){
+        return num1 - num2;
+    }
 }
