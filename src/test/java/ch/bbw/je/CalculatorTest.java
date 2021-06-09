@@ -37,4 +37,29 @@ public class CalculatorTest {
         assertEquals(c.summe(c.summe(12, 2), c.summe(23, 1)), 38);
         assertEquals(c.summe(c.summe(1, 1), c.summe(1, 1)), 4);
     }
+
+    @Test
+    public void testSimpleSubtraction(){
+        assertEquals(c.subtraction(2,6), -4);
+        assertEquals(c.subtraction(5,3),  2);
+        assertEquals(c.subtraction(-3,3), -6);
+        assertEquals(c.subtraction(-45,-45), 0);
+    }
+
+    @Test
+    public void testMAXINTSubtraction(){
+        assertEquals(c.subtraction(Integer.MAX_VALUE, Integer.MAX_VALUE), 0);
+        assertEquals(c.subtraction(-1, Integer.MAX_VALUE), Integer.MIN_VALUE);
+    }
+
+    @Test
+    public void testMININTSubtractionException(){
+        assertThrows(Exception.class, () -> c.subtraction(Integer.MIN_VALUE, Integer.MIN_VALUE));
+    }
+
+    @Test
+    public void testSubtractionOfSubtraction(){
+        assertEquals(c.subtraction(c.subtraction(-2,-2), c.subtraction(2,3)), 1);
+    }
+
 }
