@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * @author Nexterbyby
  * @version 0.0.1 26.05.2021
@@ -27,9 +28,9 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testMAXINTAdditionExceptions(){
-        assertThrows(Exception.class, () -> c.summe(Integer.MAX_VALUE, 1), "MAX_INT plus an int is outside of range");
-        assertThrows(Exception.class, () -> c.summe(Integer.MAX_VALUE, Integer.MAX_VALUE), "MAX_INT plus MAX_INT is outside of range");
+    public void testMAXINTAddition(){
+        assertTrue(c.summe(Integer.MAX_VALUE, 1) == -2147483648);
+        assertTrue(c.summe(Integer.MAX_VALUE, Integer.MAX_VALUE) == -2);
     }
 
     @Test
@@ -54,7 +55,8 @@ public class CalculatorTest {
 
     @Test
     public void testMININTSubtractionException(){
-        assertThrows(Exception.class, () -> c.subtraction(Integer.MIN_VALUE, Integer.MIN_VALUE));
+        System.out.println(c.subtraction(Integer.MIN_VALUE, Integer.MIN_VALUE));
+        assertTrue(c.subtraction(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
     }
 
     @Test
