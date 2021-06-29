@@ -6,7 +6,7 @@
 
   <groupId>ch.bbw.je</groupId>
   <artifactId>ConsoleCalculator</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
 
   <name>ConsoleCalculator</name>
   <!-- FIXME change it to the project's website -->
