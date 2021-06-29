@@ -8,3 +8,4 @@ deploy:
   file: "/home/travis/.m2/repository/ch/bbw/je/ConsoleCalculator/0.0.1-SNAPSHOT/ConsoleCalculator-0.0.1-SNAPSHOT.jar"
   on:
     repo: Nexterbyby/ConsoleCalculator
+    tags: true
