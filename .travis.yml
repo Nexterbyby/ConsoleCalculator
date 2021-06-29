@@ -2,8 +2,9 @@ language: java
 sudo: false
 script: mvn install
 deploy:
-  provider: pages
+  provider: releases
   skip_cleanup: true
-  github_token: $GH_TOKEN
+  api_key: $GH_TOKEN
+  file: "/home/travis/.m2/repository/ch/bbw/je/ConsoleCalculator/0.0.1-SNAPSHOT/ConsoleCalculator-0.0.1-SNAPSHOT.jar"
   on:
-    branch: master
+    repo: Nexterbyby/ConsoleCalculator
