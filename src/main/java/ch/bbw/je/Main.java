@@ -7,6 +7,15 @@ package ch.bbw.je;
  */
 public class Main {
     public static void main( String[] args ) {
-        System.out.println( "Hello World!" );
+        Calculator c = new Calculator();
+
+        int num1 = 15;
+        int num2 = 2;
+
+        System.out.println("Console Calculator");
+        System.out.println("==================\n");
+        System.out.println(num1 + " + " + num2 + " = " + c.summe(num1, num2));
+        System.out.println(num1 + " - " + num2 + " = " + c.subtraction(num1, num2));
+
     }
 }
