@@ -1,6 +1,7 @@
-before_script:
-  - composer self-update -q
-  - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
 language: java
 sudo: false
 script: mvn install
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
